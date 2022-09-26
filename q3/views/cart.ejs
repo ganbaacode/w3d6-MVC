@@ -1,0 +1,22 @@
+<%-include('header.ejs')%>
+
+    <h1>My Cart</h1>
+
+
+    <table>
+        <% cart.forEach((c)=>{ %>
+            <input type="hidden" name="id" id="<%=c.id%>">
+            <tr>
+                <td>
+                    <%=c.name%>
+                </td>
+                <td>
+                    <%=c.quantity%>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+
+
+
+    <%-include('footer.ejs')%>

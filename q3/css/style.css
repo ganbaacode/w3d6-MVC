@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+table {
+    border: solid 2px black;
+}
+
+table tr td {
+    border: solid 1px white;
+    width: 100px;
+}
+
+#container {
+    padding-left: 30%;
+    padding-right: 30%;
+}

@@ -1,0 +1,36 @@
+<%-include('header.ejs')%>
+
+    <h1>Cryptocurrency list</h1>
+
+
+    <table>
+        <% products.forEach((p)=>{ %>
+
+            <input type="hidden" name="myId" id="<%=p.id%>">
+            <tr>
+                <td name="<%=p.id%>">
+                    <%=p.id%>
+                </td>
+                <td>
+                    <%=p.name%>
+                </td>
+                <td>
+                    <%=p.price%>
+                </td>
+                <td>
+                    <%=p.quantity%>
+                </td>
+                <td>
+                    <form action="/addToCart" method="post">
+                        <input type="hidden" name="myId" id="<%p.id%>">
+                        <button type="submit">add cart</button>
+                    </form>
+                </td>
+            </tr>
+
+            <% }); %>
+    </table>
+
+
+
+    <%-include('footer.ejs')%>
